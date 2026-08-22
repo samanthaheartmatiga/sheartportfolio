@@ -4,24 +4,24 @@
     
     <!-- TOP MODULE: Header & Navigation Area containing its own background track -->
     <div class="bg-gradient-to-r from-[#3B000A] to-[#710014] w-full shrink-0">
-      <header class="flex justify-between items-center w-full px-6 md:px-16 py-3.5 text-[#F2F1ED] relative z-50">
-        <!-- Brand Logo Image Anchor -->
+      <header class="w-full flex justify-between items-center px-8 md:px-14 xl:px-18 py-4 text-[#F2F1ED] relative z-50">
+        <!-- Brand Logo Image Anchor (Far Left) -->
         <div class="cursor-pointer flex items-center" @click="currentTab = 'Home'">
           <img 
             v-if="!logoFailed && logoSrc" 
             :src="logoSrc" 
             alt="Heart." 
             @error="logoFailed = true"
-            class="h-8 w-auto object-contain" 
+            class="h-9 w-auto object-contain" 
           />
-          <span v-else class="text-2xl font-serif font-bold tracking-tight">
+          <span v-else class="text-2xl md:text-3xl font-serif font-bold tracking-tight">
             Heart.
           </span>
         </div>
         
-        <!-- Inline Textual Navigation Layout -->
-        <div class="flex items-center gap-8">
-          <nav class="flex gap-8 text-xs font-bold tracking-widest uppercase items-center">
+        <!-- Inline Textual Navigation Layout (Far Right) -->
+        <div class="flex items-center gap-8 md:gap-10">
+          <nav class="flex gap-6 md:gap-8 text-xs md:text-[13px] font-bold tracking-widest uppercase items-center">
             <button v-for="tab in ['Home', 'About', 'Works', 'Contact']" :key="tab"
                     @click="currentTab = tab"
                     :class="[
@@ -35,7 +35,7 @@
 
           <!-- DYNAMIC STATUS BADGE -->
           <div :class="[
-            'hidden sm:flex items-center gap-2 backdrop-blur-sm border px-3.5 py-1.5 rounded-full text-[10px] font-black tracking-widest uppercase',
+            'hidden sm:flex items-center gap-2 backdrop-blur-sm border px-4 py-2 rounded-full text-[11px] font-black tracking-widest uppercase',
             isHired 
               ? 'bg-blue-500/10 border-blue-400/30 text-blue-300' 
               : 'bg-emerald-500/10 border-emerald-400/30 text-emerald-300'
@@ -64,8 +64,8 @@
     <!-- Combined Architecture Footer Pipeline -->
     <footer class="w-full bg-[#161616] text-neutral-400 border-t border-black/50 select-none shrink-0">
       
-      <!-- MAIN FOOTER: Split Academic & Regional Info Layout -->
-      <div class="max-w-7xl mx-auto px-6 md:px-16 py-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs">
+      <!-- MAIN FOOTER: Left and Right Aligned to Viewport Edges -->
+      <div class="w-full px-8 md:px-14 xl:px-18 py-9 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs md:text-sm">
         <!-- Left Side: Educational Foundation -->
         <div class="space-y-1 text-left">
           <p class="font-bold tracking-wide text-neutral-300">Bachelor of Science in Computer Engineering</p>
@@ -76,10 +76,10 @@
         <div class="space-y-1 text-left sm:text-right">
           <p class="font-medium text-neutral-300">Based in Philippines</p>
           
-          <p class="text-neutral-300 font-mono text-[11px] flex items-center sm:justify-end gap-1.5 font-bold tracking-wide">
-            <span class="relative flex h-1.5 w-1.5">
+          <p class="text-neutral-300 font-mono text-xs flex items-center sm:justify-end gap-2 font-bold tracking-wide">
+            <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500 shadow-[0_0_8px_#34d399]"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_#34d399]"></span>
             </span>
             System Status: Active
           </p>
@@ -88,7 +88,7 @@
 
       <!-- SUB FOOTER: Centered Copyright Component Block -->
       <div class="w-full bg-black/40 border-t border-white/[0.03] py-4 px-6 text-center">
-        <p class="text-[11px] text-neutral-600 tracking-wider font-medium">
+        <p class="text-xs text-neutral-500 tracking-wider font-medium">
           © 2026 Samantha Heart S. Matiga. Engineered using Vue 3 & Tailwind.
         </p>
       </div>

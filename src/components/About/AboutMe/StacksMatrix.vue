@@ -20,23 +20,36 @@
           </tr>
         </thead>
         <tbody class="divide-y divide-neutral-200/60 text-neutral-700">
-          <tr class="hover:bg-brand-main/[0.01] transition-colors duration-150 group">
-            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">Frontend & UI/UX</td>
-            <!-- FIXED: Changed leading-relaxed to leading-normal -->
+          <!-- Row 1: Frontend & UI/UX -->
+          <tr class="hover:bg-brand-main/1 transition-colors duration-150 group">
+            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">Frontend &amp; UI/UX</td>
             <td class="py-2.5 px-4 font-semibold text-neutral-800 leading-normal">Vue.js, Dart, Flutter, CSS3, Tailwind CSS, UI Component Design</td>
             <td class="py-2.5 px-4 text-neutral-500 font-normal leading-normal">Responsive Web Design and Web Performance</td>
           </tr>
-          <tr class="hover:bg-brand-main/[0.01] transition-colors duration-150 group">
-            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">Data & Analytics</td>
+
+          <!-- Row 2: Full-Stack & Backend (NEW) -->
+          <tr class="hover:bg-brand-main/1 transition-colors duration-150 group">
+            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">Full-Stack &amp; Backend</td>
+            <td class="py-2.5 px-4 font-semibold text-neutral-800 leading-normal">RESTful APIs, Node.js / Express, PHP (Laravel basics), MySQL, Relational Database Modeling</td>
+            <td class="py-2.5 px-4 text-neutral-500 font-normal leading-normal">Serverless Functions, GraphQL, Authentication (JWT / OAuth), Cloud Storage</td>
+          </tr>
+
+          <!-- Row 3: Data & Analytics -->
+          <tr class="hover:bg-brand-main/1 transition-colors duration-150 group">
+            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">Data &amp; Analytics</td>
             <td class="py-2.5 px-4 font-semibold text-neutral-800 leading-normal">Data Modeling, Data Manipulation, Dashboard Design, Charting Libraries</td>
             <td class="py-2.5 px-4 text-neutral-500 font-normal leading-normal">Python (EDA Basics), Data Analysis, Big Data Concepts</td>
           </tr>
-          <tr class="hover:bg-brand-main/[0.01] transition-colors duration-150 group">
-            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">QA & Systems Testing</td>
+
+          <!-- Row 4: QA & Systems Testing -->
+          <tr class="hover:bg-brand-main/1 transition-colors duration-150 group">
+            <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">QA &amp; Systems Testing</td>
             <td class="py-2.5 px-4 font-semibold text-neutral-800 leading-normal">Software QA, Functional Testing, Test Cases, UI/UX Auditing</td>
             <td class="py-2.5 px-4 text-neutral-500 font-normal leading-normal">Bug Tracking, Cross Browser Testing, Mobile Testing</td>
           </tr>
-          <tr class="hover:bg-brand-main/[0.01] transition-colors duration-150 group">
+
+          <!-- Row 5: DevOps & Tooling -->
+          <tr class="hover:bg-brand-main/1 transition-colors duration-150 group">
             <td class="py-2.5 px-4 font-bold text-neutral-800 transition-colors group-hover:text-brand-main">DevOps &amp; Tooling</td>
             <td class="py-2.5 px-4 font-semibold text-neutral-800 leading-normal">Git, GitHub, Composer, npm, Vite</td>
             <td class="py-2.5 px-4 text-neutral-500 font-normal leading-normal">CLI, Build Automation, Deployment Tools</td>
@@ -52,11 +65,9 @@
         // Engineering Practices
       </span>
 
-      <!-- FIXED: Reduced space-y-2 to space-y-1.5 -->
       <div class="space-y-1.5 max-w-3xl text-xs">
         
         <!-- Practice 1 -->
-        <!-- FIXED: Changed leading-relaxed to leading-snug -->
         <div class="flex items-start gap-2 text-neutral-700 font-light leading-snug group/row">
           <span class="font-mono text-[10px] font-bold text-brand-main shrink-0 mt-0.5 group-hover/row:scale-110 transition-transform">[01] SYS_ARCH //</span>
           <p>
@@ -80,6 +91,15 @@
           <p>
             <strong class="font-bold text-neutral-800 mr-1">Development Lifecycles:</strong>
             Agile/Scrum methodologies, Git branching models (Gitflow), review cycles, and semantic version structures.
+          </p>
+        </div>
+
+        <!-- Practice 4 (NEW) -->
+        <div class="flex items-start gap-2 text-neutral-700 font-light leading-snug group/row">
+          <span class="font-mono text-[10px] font-bold text-brand-main shrink-0 mt-0.5 group-hover/row:scale-110 transition-transform">[04] API_SERV //</span>
+          <p>
+            <strong class="font-bold text-neutral-800 mr-1">API Architecture &amp; Client-Server Integration:</strong>
+            REST API endpoints, asynchronous data fetching, state hydration, request validation, and backend service connectivity.
           </p>
         </div>
 

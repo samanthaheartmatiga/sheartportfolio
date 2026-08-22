@@ -12,74 +12,74 @@
     </h2>
 
     <!-- SPECIFICATION BLOCK STRUCTURE -->
-    <div class="space-y-4 text-xs">
+    <div class="space-y-4">
       
       <!-- Container 1: Degree -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-1.5">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">01 // ACADEMIC_DEGREE</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ BSCpE ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">01 // ACADEMIC_DEGREE</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ BSCpE ]</span>
         </div>
-        <h3 class="font-bold text-neutral-800 text-xs md:text-sm leading-snug">
+        <h3 class="font-bold text-neutral-800 text-[13.5px] md:text-[15px] leading-snug">
           Bachelor of Science in Computer Engineering
         </h3>
       </div>
 
       <!-- Container 2: Institution -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-1.5">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">02 // INSTITUTION</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ PUP ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">02 // INSTITUTION</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ PUP ]</span>
         </div>
-        <h3 class="font-bold text-neutral-800 text-xs md:text-sm leading-snug">
+        <h3 class="font-bold text-neutral-800 text-[13.5px] md:text-[15px] leading-snug">
           Polytechnic University of the Philippines
         </h3>
       </div>
 
       <!-- Container 3: Scholarship Track -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-1.5">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">03 // FUNDING_TRACK</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ RA 7687 ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">03 // FUNDING_TRACK</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ RA 7687 ]</span>
         </div>
-        <p class="font-bold text-neutral-800 text-xs md:text-sm leading-tight">
+        <p class="font-bold text-neutral-800 text-[13.5px] md:text-[15px] leading-tight">
           DOST-SEI Undergraduate Scholar
         </p>
       </div>
 
       <!-- Container 4: Distinctions -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-1.5">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">04 // HONORS_MATRIX</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ SEMESTRAL ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">04 // HONORS_MATRIX</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ SEMESTRAL ]</span>
         </div>
-        <p class="font-bold text-neutral-800 text-xs md:text-sm leading-tight">
+        <p class="font-bold text-neutral-800 text-[13.5px] md:text-[15px] leading-tight">
           President's Lister
         </p>
       </div>
 
       <!-- Container 5: Thesis Project -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">05 // RESEARCH_THESIS</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ SOFTWARE &amp; HARDWARE ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">05 // RESEARCH_THESIS</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ SOFTWARE &amp; HARDWARE ]</span>
         </div>
-        <p class="font-bold text-neutral-800 text-xs md:text-sm leading-tight">
+        <p class="font-bold text-neutral-800 text-[13px] md:text-[14.5px] leading-snug">
           Ecosense: An IoT-Based Composting System Using Thermophilic Process with Cloud-Based Monitoring
         </p>
       </div>
 
       <!-- Container 6: Core Technical Focus -->
-      <div class="border border-neutral-300/70 rounded-xl p-3.5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
+      <div class="border border-neutral-300/70 rounded-xl p-4 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] transition-all duration-300 hover:border-brand-main hover:shadow-[0_4px_12px_rgba(113,0,20,0.05)]">
         <div class="flex items-center justify-between mb-2">
-          <span class="text-[10px] font-black text-neutral-400 uppercase tracking-widest">06 // FOCUS_DOMAINS</span>
-          <span class="text-[10px] font-bold text-brand-main bg-brand-main/5 px-2 py-0.5 rounded-md border border-brand-main/10 font-mono">[ CORE_ENG ]</span>
+          <span class="text-[11px] font-black text-neutral-400 uppercase tracking-widest">06 // FOCUS_DOMAINS</span>
+          <span class="text-[11px] font-bold text-brand-main bg-brand-main/5 px-2.5 py-0.5 rounded-md border border-brand-main/10 font-mono">[ CORE_ENG ]</span>
         </div>
-        <!-- FIXED: Structured into an explicit 1-line-per-item vertical stacking format -->
-        <div class="font-bold text-neutral-800 text-xs md:text-sm space-y-1">
+        <div class="font-bold text-neutral-800 text-[13px] md:text-[14.5px] space-y-1">
           <div>Software Engineering</div>
-          <div>Frontend & UI/UX Design</div>
-          <div>Data Systems & Analytics</div>
+          <div>Full-stack Developer</div>
+          <div>Frontend &amp; UI/UX Design</div>
+          <div>Data Systems &amp; Analytics</div>
           <div>Interactive Web Apps</div>
         </div>
       </div>

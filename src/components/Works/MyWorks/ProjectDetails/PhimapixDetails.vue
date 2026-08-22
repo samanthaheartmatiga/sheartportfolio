@@ -11,20 +11,21 @@
           <span class="font-sans text-[13px]">←</span> Back to Works
         </button>
         <div class="text-[10px] font-black tracking-widest text-brand-accent uppercase pt-1">
-          DATA &amp; ANALYTICS
+          DATA &amp; ANALYTICS // GEOSPATIAL
         </div>
         <h2 class="text-[33px] md:text-[37px] lg:text-[49px] font-normal font-serif text-brand-light leading-tight tracking-wide">
-          DepEd Enrollment Analytics Dashboard
+          PhiMAPix
         </h2>
         <p class="text-[13px] md:text-[15px] text-neutral-300/80 font-mono leading-relaxed tracking-wide">
-          A real-time analytics dashboard designed to transform manual reporting into actionable visual insights for Philippine education policy planning.
+          A client-side environmental telemetry dashboard built to visualize real-time atmospheric conditions across the Philippines.
         </p>
         <div class="flex flex-wrap gap-2 pt-1">
-          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Python</span>
           <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">React</span>
-          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Flask</span>
-          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Pandas</span>
-          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">NumPy</span>
+          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">JavaScript (ES6+)</span>
+          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Tailwind CSS</span>
+          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Leaflet / OSM</span>
+          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Recharts</span>
+          <span class="bg-brand-accent/20 text-brand-accent border border-brand-accent/30 text-[9px] font-black tracking-widest uppercase px-2.5 py-1 rounded-full">Vercel</span>
         </div>
       </div>
 
@@ -32,8 +33,8 @@
       <div class="lg:col-span-6 xl:col-span-7 w-full">
         <div class="rounded-[1.2rem] overflow-hidden shadow-[0_20px_40px_-10px_rgba(0,0,0,0.5)] border border-white/10 w-full h-auto">
           <img 
-            src="/deped-analytics-comparison.png" 
-            alt="DepEd Enrollment Analytics Dashboard" 
+            src="/phimapix-analytics.png" 
+            alt="PhiMAPix Geospatial Telemetry Dashboard" 
             class="w-full h-auto object-contain block select-none bg-black/40" 
           />
         </div>
@@ -59,7 +60,7 @@
               </h3>
               <div class="bg-white/60 border-l-4 border-brand-accent p-4 md:p-5 rounded-r-xl shadow-xs">
                 <p class="text-[12px] md:text-[13px] font-mono text-neutral-700 leading-relaxed text-justify">
-                  Built for the Department of Education (DepEd) to replace slow, manual data processing. As a Data Analyst in an 8-member team, I cleaned and preprocessed large enrollment datasets using Python and Pandas, then designed interactive React dashboards to give officials instant access to key education metrics.
+                  PhiMAPix is an interactive web map that tracks weather and air quality across the Philippines. I built the site to display real-time maps showing pollution levels and wind directions. The interface automatically adapts to any screen, turning complex charts into easy-to-use panels on mobile so users can quickly check local air conditions.
                 </p>
               </div>
             </div>
@@ -76,19 +77,19 @@
                 <div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 flex items-start gap-3 shadow-xs">
                   <span class="text-[11px] font-black text-brand-accent pt-0.5">01/</span>
                   <p class="text-[12px] md:text-[13px] font-mono text-neutral-600 leading-normal">
-                    <strong>Interactive Analytical Visualizations:</strong> Charts and visual graphs built with React, Pandas, and Matplotlib to provide an immediate high-level overview of national enrollment data for DepEd executives and technical staff.
+                    <strong>Multi-Layer Geospatial Telemetry:</strong> Interactive mapping engine rendering dedicated layer overlays for Air Quality Index (AQI), PM2.5 concentrations, and animated directional wind flow fields across Philippine monitoring stations.
                   </p>
                 </div>
                 <div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 flex items-start gap-3 shadow-xs">
                   <span class="text-[11px] font-black text-brand-accent pt-0.5">02/</span>
                   <p class="text-[12px] md:text-[13px] font-mono text-neutral-600 leading-normal">
-                    <strong>Multi-Dimensional Data Slicing:</strong> Custom filter controls allowing users to slice and explore data across various dimensions through a Flask API layer to support targeted program and policy planning.
+                    <strong>Adaptive Responsive UI:</strong> Dynamic viewport management that transforms complex desktop modal analytics into scrollable, swipe-friendly mobile bottom drawers (LocationDrawer, CompareDrawer, HeatmapDrawer).
                   </p>
                 </div>
                 <div class="bg-white p-3.5 rounded-xl border border-neutral-200/80 flex items-start gap-3 shadow-xs">
                   <span class="text-[11px] font-black text-brand-accent pt-0.5">03/</span>
                   <p class="text-[12px] md:text-[13px] font-mono text-neutral-600 leading-normal">
-                    <strong>End-to-End Processing Pipeline:</strong> Streamlined the data pipeline from raw Excel files to data cleaning, JSON conversion, API delivery, and frontend visual rendering.
+                    <strong>Comparative Regional Drill-Downs:</strong> Client-side telemetry engine featuring a configurable LocationScopeBar, dynamic SVG WindCompass, and multi-station comparison overlay to cross-examine atmospheric metrics across regions.
                   </p>
                 </div>
               </div>
@@ -104,10 +105,11 @@
               Documentation &amp; Verification
             </h3>
             <div class="bg-neutral-900 text-brand-light rounded-xl p-4 font-mono text-[11.5px] md:text-[12.5px] space-y-1.5 border border-white/10 shadow-inner">
-              <p class="text-neutral-500">// CASE STUDY DELIVERABLE VERIFICATION SUCCESSFUL</p>
-              <p><span class="text-brand-accent">dataset:</span> Cleaned and preprocessed using Pandas to eliminate inconsistencies</p>
-              <p><span class="text-brand-accent">workflow:</span> LIS data workflow mapped from collection to application</p>
-              <p><span class="text-brand-accent">architecture:</span> Flask API serving processed JSON data to React frontend</p>
+              <p class="text-neutral-500">// COMPONENT DEPLOYMENT &amp; PIPELINE VERIFICATION</p>
+              <p><span class="text-brand-accent">component_library:</span> dynamic, decoupled UI components with configurable prop defaults</p>
+              <p><span class="text-brand-accent">state_optimization:</span> memoized data transformation routines to prevent redundant renders</p>
+              <p><span class="text-brand-accent">responsive_behavior:</span> breakpoint-driven layout switching between desktop and mobile drawers</p>
+              <p><span class="text-brand-accent">deployment_pipeline:</span> continuous integration connected to GitHub with live CDN delivery on Vercel</p>
             </div>
           </div>
 
@@ -128,19 +130,19 @@
               <div class="grid grid-cols-1 gap-2">
                 <div class="bg-white px-3.5 py-2 rounded-xl border border-neutral-200 flex flex-col sm:flex-row sm:items-center gap-2 shadow-xs">
                   <span class="text-[10px] font-black uppercase text-neutral-400 w-24 shrink-0">ROLE:</span>
-                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Data Analyst (Data Preprocessing &amp; Visualizations)</span>
+                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Frontend Developer &amp; UI/UX Designer</span>
                 </div>
                 <div class="bg-white px-3.5 py-2 rounded-xl border border-neutral-200 flex flex-col sm:flex-row sm:items-center gap-2 shadow-xs">
                   <span class="text-[10px] font-black uppercase text-neutral-400 w-24 shrink-0">TECH STACK:</span>
-                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Python, Pandas, NumPy, Matplotlib, Flask API, React</span>
+                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">React, JavaScript (ES6+), Tailwind CSS, Leaflet / OpenStreetMap, Recharts, Lucide Icons</span>
                 </div>
                 <div class="bg-white px-3.5 py-2 rounded-xl border border-neutral-200 flex flex-col sm:flex-row sm:items-center gap-2 shadow-xs">
                   <span class="text-[10px] font-black uppercase text-neutral-400 w-24 shrink-0">SCOPE:</span>
-                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Data Preprocessing, Workflow Mapping, Interactive Dashboard UI</span>
+                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Geospatial Map Layering, Responsive Component System, Client-Side Data Processing</span>
                 </div>
                 <div class="bg-white px-3.5 py-2 rounded-xl border border-neutral-200 flex flex-col sm:flex-row sm:items-center gap-2 shadow-xs">
                   <span class="text-[10px] font-black uppercase text-neutral-400 w-24 shrink-0">PROJECT TYPE:</span>
-                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Academic Case Study</span>
+                  <span class="text-[11.5px] md:text-[12.5px] font-mono text-neutral-700">Geospatial Web Application</span>
                 </div>
               </div>
             </div>
@@ -157,28 +159,28 @@
                 
                 <div class="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center">
                   <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">Input Layer</p>
-                  <p class="text-[10px] md:text-[11px] font-black text-brand-accent uppercase mt-0.5">Raw Excel Data</p>
+                  <p class="text-[10px] md:text-[11px] font-black text-brand-accent uppercase mt-0.5">Open-Meteo / Public Telemetry APIs</p>
                 </div>
 
                 <div class="text-center text-brand-accent font-bold text-xs leading-none select-none">↓</div>
 
                 <div class="bg-neutral-50 p-2.5 rounded-xl border border-neutral-200 text-center">
-                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">Transformation</p>
-                  <p class="text-[10px] md:text-[11px] font-black text-brand-dark uppercase mt-0.5">Pandas Preprocessing &amp; JSON Storage</p>
+                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">Client-Side State</p>
+                  <p class="text-[10px] md:text-[11px] font-black text-brand-dark uppercase mt-0.5">React Hooks &amp; useMemo Caching</p>
                 </div>
 
                 <div class="text-center text-brand-accent font-bold text-xs leading-none select-none">↓</div>
 
                 <div class="bg-neutral-900 p-2.5 rounded-xl border border-neutral-800 text-center shadow-xs">
-                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">REST API Gateway</p>
-                  <p class="text-[10px] md:text-[11px] font-black text-brand-accent uppercase mt-0.5">Flask API Service</p>
+                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">Geospatial &amp; Analytic Engine</p>
+                  <p class="text-[10px] md:text-[11px] font-black text-brand-accent uppercase mt-0.5">Leaflet Overlays &amp; SVG WindCompass</p>
                 </div>
 
                 <div class="text-center text-brand-accent font-bold text-xs leading-none select-none">↓</div>
 
                 <div class="bg-neutral-50 p-2.5 rounded-xl border border-neutral-200 text-center">
-                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">Visualization</p>
-                  <p class="text-[10px] md:text-[11px] font-black text-brand-dark uppercase mt-0.5">React Dashboard Client</p>
+                  <p class="text-[8.5px] font-bold text-neutral-400 uppercase tracking-wider">User Interface Layer</p>
+                  <p class="text-[10px] md:text-[11px] font-black text-brand-dark uppercase mt-0.5">Tailwind Responsive Modals &amp; Bottom Drawers</p>
                 </div>
 
               </div>
@@ -198,7 +200,7 @@
                 100%
               </div>
               <div class="font-mono text-[11.5px] md:text-[12.5px] text-neutral-600 leading-snug">
-                Delivered a reliable real-time dashboard prototype with interactive drill-downs, fulfilling DepEd requirements for data-driven decision-making.
+                Engineered a lightweight, zero-backend telemetry dashboard with real-time geospatial layer toggles, dynamic station comparisons, and full mobile responsiveness.
               </div>
             </div>
           </div>
@@ -210,18 +212,18 @@
       <!-- Action Buttons -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 mt-6 border-t border-neutral-300/60">
         <a 
-          href="https://drive.google.com/file/d/1THxap3dsbevG4A7cm7PXwx9W9jdhNTvL/view?usp=drive_link" 
+          href="https://github.com/samanthaheartmatiga/PhiMAPix-telemetry-dashboard" 
           target="_blank"
           rel="noopener noreferrer"
           class="bg-brand-dark hover:bg-neutral-800 text-brand-light text-[11px] md:text-[13px] font-black tracking-widest uppercase py-3.5 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 shadow-md active:scale-[0.99] cursor-pointer"
         >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12H4V4z"/>
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
           </svg>
-          Presentation
+          GitHub Repository
         </a>
         <a 
-          href="https://drive.google.com/file/d/1zBqpvE8qbsH2ZI3wAXmD5q3j3meTZzqK/view?usp=drive_link" 
+          href="https://phimapix.vercel.app/" 
           target="_blank"
           rel="noopener noreferrer"
           class="border border-[#0e0909] hover:bg-brand-dark hover:text-brand-light text-brand-dark text-[11px] md:text-[13px] font-black tracking-widest uppercase py-3.5 rounded-xl flex items-center justify-center gap-3 transition-all duration-300 active:scale-[0.99] cursor-pointer"
@@ -230,7 +232,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
-          Watch System Demo Video
+          Visit Site
         </a>
       </div>
 
