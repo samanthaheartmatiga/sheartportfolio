@@ -57,7 +57,39 @@
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         
-        <!-- CARD 1: Clientora (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
+        <!-- CARD 1: Barklet (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
+        <div 
+          v-if="['ALL', 'FULL-STACK & WEB', 'UI/UX & PROTOTYPES'].includes(activeCategory)"
+          v-scroll-reveal
+          class="bg-brand-light rounded-[1.8rem] overflow-hidden group border border-transparent hover:border-brand-accent/40 transition-all duration-500 shadow-xl flex flex-col justify-between scroll-reveal-card"
+        >
+          <div class="p-3 pb-0 relative overflow-hidden">
+            <div class="rounded-[1.2rem] overflow-hidden bg-neutral-900 relative w-full h-auto">
+              <img 
+                src="/barklethome.png" 
+                alt="Barklet" 
+                class="w-full h-auto object-contain block opacity-95 group-hover:scale-105 transition-transform duration-700 select-none" 
+              />
+              <div class="absolute left-3 bottom-3 flex flex-wrap gap-1.5 z-10">
+                <span class="bg-brand-accent text-brand-dark text-[8px] font-black tracking-widest uppercase px-2.5 py-1 rounded-md shadow-sm">FULL-STACK</span>
+                <span class="bg-brand-dark/90 text-brand-light border border-white/10 text-[8px] font-black tracking-widest uppercase px-2.5 py-1 rounded-md shadow-sm">WEB</span>
+              </div>
+            </div>
+          </div>
+          <div class="p-5 text-left flex flex-col justify-between grow">
+            <div>
+              <h3 class="text-md md:text-lg font-black text-brand-dark tracking-tight uppercase leading-snug">Barklet</h3>
+              <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">A pet care and canine wellness hub engineered to streamline pet profiles, medical tracking, and modern canine lifestyle management.</p>
+            </div>
+            <div class="pt-4 border-t border-neutral-200/60 mt-4">
+              <button @click="navigateToProject('barklet')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+                View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: Clientora (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
         <div 
           v-if="['ALL', 'FULL-STACK & WEB', 'UI/UX & PROTOTYPES'].includes(activeCategory)"
           v-scroll-reveal
@@ -78,14 +110,14 @@
               <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">A collaborative management platform built to help teams organize clients, track deliverable progress, and handle financial workflows effortlessly.</p>
             </div>
             <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'clientora')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+              <button @click="navigateToProject('clientora')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
                 View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- CARD 2: PhiMAPix (FULL-STACK & WEB, DATA & ANALYTICS) -->
+        <!-- CARD 3: PhiMAPix (FULL-STACK & WEB, DATA & ANALYTICS) -->
         <div 
           v-if="['ALL', 'FULL-STACK & WEB', 'DATA & ANALYTICS'].includes(activeCategory)"
           v-scroll-reveal
@@ -106,14 +138,14 @@
               <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">An interactive geospatial dashboard built to process and visualize real-time atmospheric telemetry across Philippine regions for environmental analysis.</p>
             </div>
             <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'phimapix')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+              <button @click="navigateToProject('phimapix')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
                 View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- CARD 3: DepEd Analytics (DATA & ANALYTICS, FULL-STACK & WEB) -->
+        <!-- CARD 4: DepEd Analytics (DATA & ANALYTICS, FULL-STACK & WEB) -->
         <div 
           v-if="['ALL', 'FULL-STACK & WEB', 'DATA & ANALYTICS'].includes(activeCategory)"
           v-scroll-reveal
@@ -134,14 +166,14 @@
               <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">A real time analytics dashboard and data workflow solution designed to transform manual reporting into actionable visual insights for Philippine education policy planning.</p>
             </div>
             <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'analytics')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+              <button @click="navigateToProject('analytics')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
                 View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- CARD 4: Exploratory Data Analysis (DATA & ANALYTICS) -->
+        <!-- CARD 5: Exploratory Data Analysis (DATA & ANALYTICS) -->
         <div 
           v-if="['ALL', 'DATA & ANALYTICS'].includes(activeCategory)"
           v-scroll-reveal
@@ -162,14 +194,14 @@
               <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">An exploratory data analysis designed to uncover demographic and socio-economic determinants of passenger survival during the 1912 Titanic disaster, transforming raw historical manifests into actionable statistical insights.</p>
             </div>
             <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'exploratory')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+              <button @click="navigateToProject('exploratory')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
                 View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
               </button>
             </div>
           </div>
         </div>
 
-        <!-- CARD 5: Heart's Mini Corner (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
+        <!-- CARD 6: Heart's Mini Corner (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
         <div 
           v-if="['ALL', 'FULL-STACK & WEB', 'UI/UX & PROTOTYPES'].includes(activeCategory)"
           v-scroll-reveal
@@ -190,35 +222,7 @@
               <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">An interactive Flask-powered student portal featuring personal profile data, contact details, and basic computational functions.</p>
             </div>
             <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'flask')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
-                View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- CARD 6: E-Commerce Architecture Gateway (FULL-STACK & WEB, UI/UX & PROTOTYPES) -->
-        <div 
-          v-if="['ALL', 'FULL-STACK & WEB', 'UI/UX & PROTOTYPES'].includes(activeCategory)"
-          v-scroll-reveal
-          class="bg-brand-light rounded-[1.8rem] overflow-hidden group border border-transparent hover:border-brand-accent/40 transition-all duration-500 shadow-xl flex flex-col justify-between scroll-reveal-card"
-        >
-          <div class="p-3 pb-0 relative overflow-hidden">
-            <div class="rounded-[1.2rem] overflow-hidden bg-neutral-900 relative w-full h-auto">
-              <img src="/myflask-me.png" alt="E-Commerce Architecture Gateway" class="w-full h-auto object-contain block opacity-95 group-hover:scale-105 transition-transform duration-700 select-none" />
-              <div class="absolute left-3 bottom-3 flex flex-wrap gap-1.5 z-10">
-                <span class="bg-brand-accent text-brand-dark text-[8px] font-black tracking-widest uppercase px-2.5 py-1 rounded-md shadow-sm">FULL-STACK</span>
-                <span class="bg-brand-dark/90 text-brand-light border border-white/10 text-[8px] font-black tracking-widest uppercase px-2.5 py-1 rounded-md shadow-sm">UI/UX</span>
-              </div>
-            </div>
-          </div>
-          <div class="p-5 text-left flex flex-col justify-between grow">
-            <div>
-              <h3 class="text-md md:text-lg font-black text-brand-dark tracking-tight uppercase leading-snug">E-Commerce Core Gateway</h3>
-              <p class="text-[11px] text-brand-dark/70 font-sans mt-2 leading-relaxed h-10 overflow-hidden line-clamp-2">High-performance scalable interface mapping secure dynamic checkouts and reusable component layers.</p>
-            </div>
-            <div class="pt-4 border-t border-neutral-200/60 mt-4">
-              <button @click="$emit('select-project', 'ecommerce')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
+              <button @click="navigateToProject('flask')" class="border border-brand-dark/30 text-brand-dark hover:bg-brand-dark hover:text-brand-light text-[9px] font-black tracking-widest uppercase px-4 py-2.5 rounded-xl flex items-center gap-3 group/btn transition-all active:scale-[0.98] cursor-pointer">
                 View Project <span class="transform group-hover/btn:translate-x-1 transition-transform inline-block font-sans">➔</span>
               </button>
             </div>
@@ -239,10 +243,19 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+import { useRouter } from 'vue-router'
 
-defineEmits(['select-project'])
+const emit = defineEmits(['select-project'])
+const router = useRouter()
 
 const activeCategory = ref('ALL')
+
+const navigateToProject = (projectId) => {
+  emit('select-project', projectId)
+  if (router) {
+    router.push(`/works/${projectId}`)
+  }
+}
 
 const filteredCardsCount = computed(() => {
   if (activeCategory.value === 'ALL') return 6

@@ -1,6 +1,15 @@
 // src/data/projects.js
 export const projectsData = [
   {
+    id: 'barklet',
+    name: 'Barklet',
+    tag: 'FULL-STACK // WEB',
+    categories: ['FULL-STACK & WEB', 'UI/UX & PROTOTYPES'],
+    badges: ['FULL-STACK', 'WEB'],
+    image: '/barklethome.png',
+    description: 'A pet care and canine wellness hub engineered to streamline pet profiles, medical tracking, and modern canine lifestyle management.'
+  },
+  {
     id: 'clientora',
     name: 'Clientora',
     tag: 'FULL-STACK // UI/UX',
@@ -44,14 +53,5 @@ export const projectsData = [
     badges: ['FLASK', 'PORTAL'],
     image: '/myflask.png',
     description: 'An interactive Flask-powered student portal featuring personal profile data, contact details, and basic computational functions.'
-  },
-  {
-    id: 'ecommerce',
-    name: 'E-Commerce Core Gateway',
-    tag: 'FULL-STACK // UI/UX',
-    categories: ['FULL-STACK & WEB', 'UI/UX & PROTOTYPES'],
-    badges: ['FULL-STACK', 'UI/UX'],
-    image: '/myflask-me.png',
-    description: 'High-performance scalable interface mapping secure dynamic checkouts and reusable component layers.'
   }
 ]

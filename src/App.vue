@@ -6,7 +6,7 @@
     <div class="bg-gradient-to-r from-[#3B000A] to-[#710014] w-full shrink-0">
       <header class="w-full flex justify-between items-center px-8 md:px-14 xl:px-18 py-4 text-[#F2F1ED] relative z-50">
         <!-- Brand Logo Image Anchor (Far Left) -->
-        <div class="cursor-pointer flex items-center" @click="currentTab = 'Home'">
+        <router-link to="/home" class="cursor-pointer flex items-center">
           <img 
             v-if="!logoFailed && logoSrc" 
             :src="logoSrc" 
@@ -17,20 +17,24 @@
           <span v-else class="text-2xl md:text-3xl font-serif font-bold tracking-tight">
             Heart.
           </span>
-        </div>
+        </router-link>
         
         <!-- Inline Textual Navigation Layout (Far Right) -->
         <div class="flex items-center gap-8 md:gap-10">
           <nav class="flex gap-6 md:gap-8 text-xs md:text-[13px] font-bold tracking-widest uppercase items-center">
-            <button v-for="tab in ['Home', 'About', 'Works', 'Contact']" :key="tab"
-                    @click="currentTab = tab"
-                    :class="[
-                      currentTab === tab 
-                        ? 'text-[#F2F1ED] border-b-2 border-[rgb(179,143,111)] pb-1' 
-                        : 'text-[#F2F1ED]/60 hover:text-[#F2F1ED] transition duration-200 pb-1 cursor-pointer'
-                    ]">
-              {{ tab }}
-            </button>
+            <router-link 
+              v-for="item in navItems" 
+              :key="item.path"
+              :to="item.path"
+              class="transition duration-200 pb-1"
+              :class="[
+                isNavActive(item.path)
+                  ? 'text-[#F2F1ED] border-b-2 border-[rgb(179,143,111)]' 
+                  : 'text-[#F2F1ED]/60 hover:text-[#F2F1ED]'
+              ]"
+            >
+              {{ item.name }}
+            </router-link>
           </nav>
 
           <!-- DYNAMIC STATUS BADGE -->
@@ -56,9 +60,9 @@
       </header>
     </div>
 
-    <!-- MAIN VIEW MOUNTING LAYOUT: Switched to instantaneous tracking display wrapper -->
+    <!-- MAIN VIEW MOUNTING LAYOUT: Routed with RouterView -->
     <main class="w-full flex-grow bg-[#F2F1ED] relative overflow-hidden">
-      <component :is="tabs[currentTab]" @navigate="handleTabNavigation" :key="currentTab" />
+      <router-view :key="$route.fullPath" />
     </main>
 
     <!-- Combined Architecture Footer Pipeline -->
@@ -89,7 +93,7 @@
       <!-- SUB FOOTER: Centered Copyright Component Block -->
       <div class="w-full bg-black/40 border-t border-white/[0.03] py-4 px-6 text-center">
         <p class="text-xs text-neutral-500 tracking-wider font-medium">
-          © 2026 Samantha Heart S. Matiga. Engineered using Vue 3 & Tailwind.
+          © 2026 Samantha Heart S. Matiga. Engineered using Vue 3 &amp; Tailwind.
         </p>
       </div>
 
@@ -98,77 +102,64 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import HomeTab from './components/Home/HomeTab.vue'
-import WorksTab from './components/Works/WorksTab.vue'
-import AboutTab from './components/About/AboutTab.vue'
-import ContactTab from './components/Contact/ContactTab.vue'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
 
-const currentTab = ref('Home')
+const route = useRoute()
 const isHired = ref(false)
 
 const logoSrc = ref('/src/assets/logo.png')
 const logoFailed = ref(false)
 
-const tabs = {
-  Home: HomeTab,
-  Works: WorksTab,
-  About: AboutTab,
-  Contact: ContactTab
-}
+const navItems = [
+  { name: 'Home', path: '/home' },
+  { name: 'About', path: '/about' },
+  { name: 'Works', path: '/works' },
+  { name: 'Contact', path: '/contact' }
+]
 
-const handleTabNavigation = (targetTab) => {
-  currentTab.value = targetTab
-  window.scrollTo({ top: 0, behavior: 'auto' })
-}
-
-// URL parameter trailing anchor hash scrub station
-onMounted(() => {
-  if (window.location.hash) {
-    window.history.replaceState(null, '', window.location.pathname + window.location.search);
+// Keeps 'Works' highlighted even when on deep links like /works/barklet
+const isNavActive = (path) => {
+  if (path === '/works') {
+    return route.path.startsWith('/works')
   }
-})
+  return route.path === path
+}
 </script>
 
 <style>
 html, body {
-  /* Locks right-hand scroll layout coordinates steadily so elements never bounce left/right */
   scrollbar-gutter: stable;
   overflow-y: auto;
   height: auto;
-  background-color: #161616; /* Prevents visual white tracking breaks on bounce/load */
+  background-color: #161616;
 }
 
 /* ==========================================
    1. CUSTOM THEMED SCROLLBAR INTERFACE
    ========================================== */
-/* Total width of the scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Scrollbar Track (Background) */
 ::-webkit-scrollbar-track {
-  background: #000000; /* Matches the dark architectural color profile */
+  background: #000000;
 }
 
-/* Scrollbar Handle (Pill Element) */
 ::-webkit-scrollbar-thumb {
-  background: #710014; /* Signature Deep Wine Brand color */
+  background: #710014;
   border-radius: 10px;
-  border: 3px solid #710014; /* Creates a clean floating/inset illusion */
+  border: 3px solid #710014;
 }
 
-/* Scrollbar Handle on Hover state */
 ::-webkit-scrollbar-thumb:hover {
-  background: #9c1329; /* Interactive state shift for tactile feedback */
+  background: #9c1329;
 }
 
 /* ==========================================
    2. LAYOUT MANAGEMENT
    ========================================== */
 main {
-  /* Suppresses layout boundary bleed */
   overflow: hidden; 
 }
 </style>
