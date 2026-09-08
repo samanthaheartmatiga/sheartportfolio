@@ -65,12 +65,12 @@
           </div>
 
           <div class="flex flex-wrap gap-4 pt-1.5">
-            <button @click="$emit('navigate', 'Works')" class="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded shadow-lg transition duration-300 cursor-pointer hover:scale-[1.02] transform">
+            <button @click="navigateToWorks" class="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded shadow-lg transition duration-300 cursor-pointer hover:scale-[1.02] transform">
               View My Works
             </button>
-            <button class="border border-brand-light/30 hover:border-brand-light hover:bg-brand-light/5 text-brand-light text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded transition duration-300 cursor-pointer">
-              Download CV
-            </button>
+            <a href="/SamanthaHeart_Matiga_Resume.pdf" target="_blank" rel="noopener noreferrer" class="border border-brand-light/30 hover:border-brand-light hover:bg-brand-light/5 text-brand-light text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded transition duration-300 cursor-pointer inline-flex items-center justify-center">
+              View CV
+            </a>
           </div>
         </div>
 
@@ -157,7 +157,7 @@
               <ConnectLink v-for="social in socialMatrix" :key="social.platform" :platform="social.platform" :handle="social.handle" :icon="social.icon" :link="social.link" />
             </div>
 
-            <ProjectSlideshow @navigate="$emit('navigate', $event)" />
+            <ProjectSlideshow @navigate="handleProjectNavigate" />
           </div>
         </div>
 
@@ -169,12 +169,28 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
 import CompetencyCard from './Hero/CompetencyCard.vue'
 import MilestoneCard from './Hero/MilestoneCard.vue'
 import ConnectLink from './Hero/ConnectLink.vue'
 import ProjectSlideshow from './Hero/ProjectSlideshow.vue'
 
-defineEmits(['navigate'])
+const emit = defineEmits(['navigate'])
+const router = useRouter()
+
+const navigateToWorks = () => {
+  emit('navigate', 'Works')
+  if (router) {
+    router.push('/works')
+  }
+}
+
+const handleProjectNavigate = (target) => {
+  emit('navigate', target)
+  if (router && target === 'Works') {
+    router.push('/works')
+  }
+}
 
 const sysEngSrc = ref('/home.png')
 const imageFailed = ref(false)
