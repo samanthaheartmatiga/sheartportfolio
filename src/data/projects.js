@@ -1,6 +1,24 @@
 // src/data/projects.js
 export const projectsData = [
   {
+    id: 'crypto-pipeline',
+    name: 'Crypto Pipeline Telemetry',
+    tag: 'DATA ENGINEERING // TELEMETRY',
+    categories: ['DATA & ANALYTICS'],
+    badges: ['PYTHON', 'POSTGRESQL'],
+    image: '/cryptop.png',
+    description: 'An automated crypto ETL pipeline and dashboard delivering validated, 10-minute PostgreSQL window analytics in real time.'
+  },
+  {
+    id: 'supply-chain',
+    name: 'Supply Chain Dashboard',
+    tag: 'DATA ANALYTICS // SUPPLY CHAIN & PROCUREMENT',
+    categories: ['DATA & ANALYTICS'],
+    badges: ['POWER BI', 'DAX'],
+    image: '/supplyp1.png',
+    description: 'A high-density, two-page Power BI executive analytics suite built to monitor enterprise financial health, operational fulfillment, and vendor reliability.'
+  },
+  {
     id: 'barklet',
     name: 'Barklet',
     tag: 'FULL-STACK // WEB',
@@ -35,23 +53,5 @@ export const projectsData = [
     badges: ['DATA & ANALYTICS', 'REACT'],
     image: '/deped-analytics.png',
     description: 'A real time analytics dashboard and data workflow solution designed to transform manual reporting into actionable visual insights for Philippine education policy planning.'
-  },
-  {
-    id: 'exploratory',
-    name: 'Exploratory Data Analysis',
-    tag: 'DATA & ANALYTICS // PYTHON',
-    categories: ['DATA & ANALYTICS'],
-    badges: ['DATA & ANALYTICS', 'PYTHON'],
-    image: '/exploratory.png',
-    description: 'An exploratory data analysis designed to uncover demographic determinants of passenger survival during the 1912 Titanic disaster.'
-  },
-  {
-    id: 'flask',
-    name: "Heart's Mini Corner",
-    tag: 'FLASK // PORTAL',
-    categories: ['FULL-STACK & WEB', 'UI/UX & PROTOTYPES'],
-    badges: ['FLASK', 'PORTAL'],
-    image: '/myflask.png',
-    description: 'An interactive Flask-powered student portal featuring personal profile data, contact details, and basic computational functions.'
   }
 ]

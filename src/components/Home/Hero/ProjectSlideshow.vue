@@ -85,9 +85,11 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { projectsData } from '../../../data/projects'
 
 const emit = defineEmits(['navigate'])
+const router = useRouter()
 
 const activeIndex = ref(0)
 const transitionDirection = ref('slide-left')
@@ -118,6 +120,13 @@ const goToSlide = (index) => {
 
 const executeView = () => {
   emit('navigate', 'Works')
+  if (router) {
+    if (activeProject.value && activeProject.value.id) {
+      router.push(`/works/${activeProject.value.id}`)
+    } else {
+      router.push('/works')
+    }
+  }
 }
 
 // Touch swipe support (Mobile / Trackpad)
