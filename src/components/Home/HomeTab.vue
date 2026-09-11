@@ -83,7 +83,8 @@
               <img 
                 v-if="!imageFailed && sysEngSrc" 
                 :src="sysEngSrc" 
-                alt="Samantha Heart - Profile Matrix" 
+                alt="Samantha 
+                 - Profile Matrix" 
                 @error="imageFailed = true" 
                 class="w-full h-full object-cover object-[50%_0%] scale-[1.12] origin-top rounded-3xl relative z-20 transition-transform duration-700 ease-out select-none" 
               />

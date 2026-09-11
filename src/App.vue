@@ -4,7 +4,7 @@
     
     <!-- TOP MODULE: Header & Navigation Area containing its own background track -->
     <div class="bg-gradient-to-r from-[#3B000A] to-[#710014] w-full shrink-0">
-      <header class="w-full flex justify-between items-center px-8 md:px-14 xl:px-18 py-4 text-[#F2F1ED] relative z-50">
+      <header class="w-full flex justify-between items-center px-8 md:px-14 xl:px-18 py-3 text-[#F2F1ED] relative z-50">
         <!-- Brand Logo Image Anchor (Far Left) -->
         <router-link to="/home" class="cursor-pointer flex items-center">
           <img 
@@ -12,9 +12,9 @@
             :src="logoSrc" 
             alt="Heart." 
             @error="logoFailed = true"
-            class="h-9 w-auto object-contain" 
+            class="h-13 md:h-15 w-auto object-contain transition-transform duration-200 hover:scale-105" 
           />
-          <span v-else class="text-2xl md:text-3xl font-serif font-bold tracking-tight">
+          <span v-else class="text-3xl md:text-4xl font-serif font-bold tracking-tight">
             Heart.
           </span>
         </router-link>
@@ -108,7 +108,7 @@ import { useRoute } from 'vue-router'
 const route = useRoute()
 const isHired = ref(false)
 
-const logoSrc = ref('/src/assets/logo.png')
+const logoSrc = ref('/heartlogo.png')
 const logoFailed = ref(false)
 
 const navItems = [
