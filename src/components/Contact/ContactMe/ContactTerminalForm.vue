@@ -1,131 +1,127 @@
 <template>
-  <!-- Clean root layout tag to remain static, avoiding gap distortions -->
   <div class="w-full font-mono select-none text-[#161616]">
     
     <!-- TOP LAYER: Stepped Asymmetric Header Bar -->
-    <div class="grid grid-cols-1 md:grid-cols-12 w-full items-stretch relative z-10 gap-y-4 md:gap-y-0">
+    <div class="grid grid-cols-1 md:grid-cols-12 w-full items-stretch relative z-10 gap-y-2 md:gap-y-0">
       
       <!-- Top Left: Title Block -->
-      <div class="md:col-span-7 bg-[#b38f6f] text-[#161616] pt-4 pb-2 px-8 rounded-tl-[2.5rem] flex flex-col justify-center">
-        
-        <!-- Structural containment envelope to match your exact portfolio layout logic -->
+      <div class="md:col-span-7 bg-[#b38f6f] text-[#161616] pt-3.5 pb-2.5 px-5 sm:px-6 rounded-t-2xl md:rounded-tr-none md:rounded-tl-2xl flex flex-col justify-center">
         <div>
-          <h2 class="text-2xl md:text-3xl font-black uppercase tracking-wider text-[#161616] overflow-hidden whitespace-nowrap border-r-2 border-transparent animate-typing">
+          <h2 class="text-xl sm:text-2xl font-black uppercase tracking-wider text-[#161616] overflow-hidden whitespace-nowrap border-r-2 border-transparent animate-typing">
             GET IN TOUCH.
           </h2>
         </div>
         
-        <p class="text-[11px] text-[#161616]/80 uppercase tracking-widest mt-1.5 leading-relaxed">
+        <p class="text-[9.5px] sm:text-[10px] text-[#161616]/80 uppercase tracking-widest mt-1 leading-relaxed">
           Have any questions or special requests?<br />
           Feel free to reach out directly.
         </p>
       </div>
 
       <!-- Top Right: Light Background CTA Banner Block Container Frame -->
-      <div class="md:col-span-5 pb-4 md:pl-4 flex flex-col">
-        <div class="bg-[#F2F1ED] border border-neutral-200/60 rounded-none rounded-tr-[2.5rem] p-6 text-center md:text-left shadow-[0_4px_20px_rgba(0,0,0,0.02)] h-full flex items-center justify-center">
-          <p class="text-xs font-black uppercase tracking-wider text-[#161616] leading-relaxed">
+      <div class="md:col-span-5 pb-3 md:pb-4 md:pl-4 flex flex-col">
+        <div class="bg-[#F2F1ED] border border-neutral-200/60 rounded-xl md:rounded-none md:rounded-tr-2xl p-3.5 sm:p-4 text-center md:text-left shadow-2xs h-full flex items-center justify-center">
+          <p class="text-[9.5px] sm:text-[10px] font-black uppercase tracking-wider text-[#161616] leading-snug">
             INITIALIZE CONNECTION TODAY TO EXPLORE COGNITIVE HORIZONS AND FUTURE SYSTEMS!
           </p>
         </div>
       </div>
     </div>
 
-    <!-- MAIN PANEL BODY: Full Bleed Message Card Deck -->
-    <div class="bg-[#b38f6f] p-6 sm:p-8 md:p-10 rounded-b-[2.5rem] relative z-0">
+    <!-- MAIN PANEL BODY: Message Card Deck -->
+    <div class="bg-[#b38f6f] p-4 sm:p-5 md:p-6 rounded-b-2xl relative z-0">
       
       <!-- Inner Form Container: Soft Pearl -->
-      <div class="bg-[#F2F1ED] rounded-[2rem] p-6 sm:p-8 flex flex-col justify-between shadow-[0_8px_16px_rgba(0,0,0,0.02)] transition-all duration-500 hover:scale-[1.015] hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
+      <div class="bg-[#F2F1ED] rounded-xl p-4.5 sm:p-6 flex flex-col justify-between shadow-xs transition-all duration-300">
         <div>
-          
-          <!-- FIXED: Added 'novalidate' to override native tooltips and capture with custom logic -->
-          <form @submit.prevent="dispatchMessage" novalidate class="space-y-4 text-left">
+          <form @submit.prevent="dispatchMessage" novalidate class="space-y-3.5 text-left">
             
             <!-- Input Matrix Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <!-- Field 1: Identity -->
-              <div class="space-y-1 group relative">
-                <label class="block text-[9px] font-black tracking-widest uppercase text-neutral-400 group-focus-within:text-[#161616] transition-colors">Identity</label>
+              <div class="space-y-0.5 group relative">
+                <label class="block text-[8.5px] font-black tracking-widest uppercase text-neutral-500 group-focus-within:text-[#161616] transition-colors">Identity</label>
                 <input 
                   v-model="form.name"
                   type="text" 
                   placeholder="Your Full Name"
-                  class="w-full bg-white border border-[#161616] rounded-xl px-3.5 py-2.5 text-xs text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all"
+                  class="w-full bg-white border border-[#161616]/80 rounded-lg px-2.5 py-2 text-[11px] text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all font-mono"
                   @input="clearValidationError('name')"
                   required
                 />
                 <!-- CUSTOM CRIMSON MONO TOOLTIP -->
-                <div v-if="validationErrors.name" class="absolute z-30 left-4 bottom-[calc(100%-24px)] bg-[#710014] text-[#F2F1ED] text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 transition-all duration-200 animate-bounce">
-                  <span class="text-xs">⚠️</span> {{ validationErrors.name }}
-                  <div class="absolute bottom-[-4px] left-4 w-2 h-2 bg-[#710014] rotate-45"></div>
+                <div v-if="validationErrors.name" class="absolute z-30 left-2 bottom-[calc(100%-10px)] bg-[#710014] text-[#F2F1ED] text-[9px] uppercase font-bold tracking-wider px-2 py-1 rounded shadow-md flex items-center gap-1 animate-bounce">
+                  <span>⚠️</span> {{ validationErrors.name }}
+                  <div class="absolute bottom-[-3px] left-3 w-1.5 h-1.5 bg-[#710014] rotate-45"></div>
                 </div>
               </div>
 
               <!-- Field 2: Contact Email -->
-              <div class="space-y-1 group relative">
-                <label class="block text-[9px] font-black tracking-widest uppercase text-neutral-400 group-focus-within:text-[#161616] transition-colors">Contact Email</label>
+              <div class="space-y-0.5 group relative">
+                <label class="block text-[8.5px] font-black tracking-widest uppercase text-neutral-500 group-focus-within:text-[#161616] transition-colors">Contact Email</label>
                 <input 
                   v-model="form.email"
                   type="email" 
                   placeholder="email@example.com"
-                  class="w-full bg-white border border-[#161616] rounded-xl px-3.5 py-2.5 text-xs text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all"
+                  class="w-full bg-white border border-[#161616]/80 rounded-lg px-2.5 py-2 text-[11px] text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all font-mono"
                   @input="clearValidationError('email')"
                   required
                 />
                 <!-- CUSTOM CRIMSON MONO TOOLTIP -->
-                <div v-if="validationErrors.email" class="absolute z-30 left-4 bottom-[calc(100%-24px)] bg-[#710014] text-[#F2F1ED] text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 transition-all duration-200 animate-bounce">
-                  <span class="text-xs">⚠️</span> {{ validationErrors.email }}
-                  <div class="absolute bottom-[-4px] left-4 w-2 h-2 bg-[#710014] rotate-45"></div>
+                <div v-if="validationErrors.email" class="absolute z-30 left-2 bottom-[calc(100%-10px)] bg-[#710014] text-[#F2F1ED] text-[9px] uppercase font-bold tracking-wider px-2 py-1 rounded shadow-md flex items-center gap-1 animate-bounce">
+                  <span>⚠️</span> {{ validationErrors.email }}
+                  <div class="absolute bottom-[-3px] left-3 w-1.5 h-1.5 bg-[#710014] rotate-45"></div>
                 </div>
               </div>
             </div>
 
             <!-- Field 3: Subject of Interest -->
-            <div class="space-y-1 group relative">
-              <label class="block text-[9px] font-black tracking-widest uppercase text-neutral-400 group-focus-within:text-[#161616] transition-colors">Subject of Interest</label>
+            <div class="space-y-0.5 group relative">
+              <label class="block text-[8.5px] font-black tracking-widest uppercase text-neutral-500 group-focus-within:text-[#161616] transition-colors">Subject of Interest</label>
               <input 
                 v-model="form.subject"
                 type="text" 
-                placeholder="e.g. System Redesign"
-                class="w-full bg-white border border-[#161616] rounded-xl px-3.5 py-2.5 text-xs text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all"
+                placeholder="e.g. Pipeline Architecture / Systems Collaboration"
+                class="w-full bg-white border border-[#161616]/80 rounded-lg px-2.5 py-2 text-[11px] text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all font-mono"
                 @input="clearValidationError('subject')"
                 required
               />
               <!-- CUSTOM CRIMSON MONO TOOLTIP -->
-              <div v-if="validationErrors.subject" class="absolute z-30 left-4 bottom-[calc(100%-24px)] bg-[#710014] text-[#F2F1ED] text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 transition-all duration-200 animate-bounce">
-                <span class="text-xs">⚠️</span> {{ validationErrors.subject }}
-                <div class="absolute bottom-[-4px] left-4 w-2 h-2 bg-[#710014] rotate-45"></div>
+              <div v-if="validationErrors.subject" class="absolute z-30 left-2 bottom-[calc(100%-10px)] bg-[#710014] text-[#F2F1ED] text-[9px] uppercase font-bold tracking-wider px-2 py-1 rounded shadow-md flex items-center gap-1 animate-bounce">
+                <span>⚠️</span> {{ validationErrors.subject }}
+                <div class="absolute bottom-[-3px] left-3 w-1.5 h-1.5 bg-[#710014] rotate-45"></div>
               </div>
             </div>
 
             <!-- Field 4: Message Payload -->
-            <div class="space-y-1 group relative">
-              <label class="block text-[9px] font-black tracking-widest uppercase text-neutral-400 group-focus-within:text-[#161616] transition-colors">Message</label>
+            <div class="space-y-0.5 group relative">
+              <label class="block text-[8.5px] font-black tracking-widest uppercase text-neutral-500 group-focus-within:text-[#161616] transition-colors">Message</label>
               <textarea 
                 v-model="form.message"
                 rows="4"
                 placeholder="Briefly describe your vision......"
-                class="w-full bg-white border border-[#161616] rounded-xl px-3.5 py-2.5 text-xs text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all resize-none leading-relaxed"
+                class="w-full bg-white border border-[#161616]/80 rounded-lg px-2.5 py-2 text-[11px] text-[#161616] placeholder-neutral-400 focus:outline-none focus:border-[#161616] focus:ring-1 focus:ring-[#161616]/20 transition-all resize-none leading-relaxed font-mono"
                 @input="clearValidationError('message')"
                 required
               ></textarea>
               <!-- CUSTOM CRIMSON MONO TOOLTIP -->
-              <div v-if="validationErrors.message" class="absolute z-30 left-4 bottom-[calc(100%-24px)] bg-[#710014] text-[#F2F1ED] text-[10px] uppercase font-bold tracking-wider px-3 py-1.5 rounded-lg shadow-md flex items-center gap-1.5 transition-all duration-200 animate-bounce">
-                <span class="text-xs">⚠️</span> {{ validationErrors.message }}
-                <div class="absolute bottom-[-4px] left-4 w-2 h-2 bg-[#710014] rotate-45"></div>
+              <div v-if="validationErrors.message" class="absolute z-30 left-2 bottom-[calc(100%-10px)] bg-[#710014] text-[#F2F1ED] text-[9px] uppercase font-bold tracking-wider px-2 py-1 rounded shadow-md flex items-center gap-1 animate-bounce">
+                <span>⚠️</span> {{ validationErrors.message }}
+                <div class="absolute bottom-[-3px] left-3 w-1.5 h-1.5 bg-[#710014] rotate-45"></div>
               </div>
             </div>
 
             <!-- FEEDBACK STATUS ALERTS -->
-            <div v-if="statusMessage" class="text-[11px] font-black tracking-wider uppercase transition-all duration-300 shadow-none" :class="statusType === 'success' ? 'text-emerald-600' : 'text-rose-600'">
+            <div v-if="statusMessage" class="text-[10px] font-black tracking-wider uppercase transition-all duration-300" :class="statusType === 'success' ? 'text-emerald-700' : 'text-rose-700'">
               // {{ statusMessage }}
             </div>
 
-            <!-- SUBMIT MODULE RUNTIME ACTION -->
-            <div class="pt-2">
+            <!-- SUBMIT ACTION -->
+            <div class="pt-1.5">
               <button 
                 type="submit"
-                class="w-full bg-[#161616] hover:bg-neutral-800 active:bg-black text-[#F2F1ED] text-[10px] font-black tracking-widest uppercase py-3.5 rounded-xl shadow-md transition-all active:scale-[0.995] flex items-center justify-center"
+                :disabled="isSubmitting"
+                class="w-full bg-[#161616] hover:bg-neutral-800 active:bg-black text-[#F2F1ED] text-[9.5px] font-black tracking-widest uppercase py-2.5 rounded-lg shadow-xs transition-all active:scale-[0.995] flex items-center justify-center cursor-pointer disabled:opacity-60"
               >
                 {{ isSubmitting ? 'Sending...' : 'Send Message' }}
               </button>
@@ -149,12 +145,10 @@ const form = ref({
   message: ''
 })
 
-// Web3Forms background state processes
 const isSubmitting = ref(false)
 const statusMessage = ref('')
 const statusType = ref('')
 
-// FIXED: Added local theme error hooks
 const validationErrors = ref({
   name: '',
   email: '',
@@ -168,7 +162,6 @@ const clearValidationError = (field) => {
 
 const validateForm = () => {
   let isValid = true
-  // Reset previous tracking
   validationErrors.value = { name: '', email: '', subject: '', message: '' }
 
   if (!form.value.name.trim()) {
@@ -180,7 +173,6 @@ const validateForm = () => {
     validationErrors.value.email = 'Please fill out this field.'
     isValid = false
   } else {
-    // Standard quick regex to enforce validation mapping blocks
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(form.value.email)) {
       validationErrors.value.email = 'Please enter a valid email address.'
@@ -202,7 +194,6 @@ const validateForm = () => {
 }
 
 const dispatchMessage = async () => {
-  // FIXED: Pre-intercept submission checking using custom layout tools
   if (!validateForm()) return
 
   isSubmitting.value = true
@@ -239,7 +230,7 @@ const dispatchMessage = async () => {
   } catch (error) {
     statusType.value = 'error'
     statusMessage.value = 'Network error. Please try again.'
-    console.error('Submission processing failure sequence caught:', error)
+    console.error('Submission error:', error)
   } finally {
     isSubmitting.value = false
   }
@@ -247,9 +238,6 @@ const dispatchMessage = async () => {
 </script>
 
 <style scoped>
-/* ==========================================
-    TERMINAL TYPOGRAPHY ANIMATION ENGINE
-   ========================================== */
 @keyframes terminalTyping {
   from { width: 0; }
   to { width: 100%; }

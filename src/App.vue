@@ -4,7 +4,7 @@
     
     <!-- TOP MODULE: Header & Navigation Area containing its own background track -->
     <div class="bg-gradient-to-r from-[#3B000A] to-[#710014] w-full shrink-0">
-      <header class="w-full flex justify-between items-center px-8 md:px-14 xl:px-18 py-3 text-[#F2F1ED] relative z-50">
+      <header class="w-full flex justify-between items-center px-6 md:px-10 xl:px-14 py-2 text-[#F2F1ED] relative z-50">
         <!-- Brand Logo Image Anchor (Far Left) -->
         <router-link to="/home" class="cursor-pointer flex items-center">
           <img 
@@ -12,21 +12,21 @@
             :src="logoSrc" 
             alt="Heart." 
             @error="logoFailed = true"
-            class="h-13 md:h-15 w-auto object-contain transition-transform duration-200 hover:scale-105" 
+            class="h-9 md:h-10 w-auto object-contain transition-transform duration-200 hover:scale-105" 
           />
-          <span v-else class="text-3xl md:text-4xl font-serif font-bold tracking-tight">
+          <span v-else class="text-2xl md:text-3xl font-serif font-bold tracking-tight">
             Heart.
           </span>
         </router-link>
         
         <!-- Inline Textual Navigation Layout (Far Right) -->
-        <div class="flex items-center gap-8 md:gap-10">
-          <nav class="flex gap-6 md:gap-8 text-xs md:text-[13px] font-bold tracking-widest uppercase items-center">
+        <div class="flex items-center gap-5 md:gap-7">
+          <nav class="flex gap-4 md:gap-6 text-[11px] md:text-xs font-bold tracking-widest uppercase items-center">
             <router-link 
               v-for="item in navItems" 
               :key="item.path"
               :to="item.path"
-              class="transition duration-200 pb-1"
+              class="transition duration-200 pb-0.5"
               :class="[
                 isNavActive(item.path)
                   ? 'text-[#F2F1ED] border-b-2 border-[rgb(179,143,111)]' 
@@ -39,18 +39,18 @@
 
           <!-- DYNAMIC STATUS BADGE -->
           <div :class="[
-            'hidden sm:flex items-center gap-2 backdrop-blur-sm border px-4 py-2 rounded-full text-[11px] font-black tracking-widest uppercase',
+            'hidden sm:flex items-center gap-1.5 backdrop-blur-sm border px-3 py-1 rounded-full text-[9px] font-black tracking-widest uppercase',
             isHired 
               ? 'bg-blue-500/10 border-blue-400/30 text-blue-300' 
               : 'bg-emerald-500/10 border-emerald-400/30 text-emerald-300'
           ]">
-            <span class="relative flex h-2 w-2">
+            <span class="relative flex h-1.5 w-1.5">
               <span :class="[
                 'animate-ping absolute inline-flex h-full w-full rounded-full opacity-75',
                 isHired ? 'bg-blue-400' : 'bg-emerald-400'
               ]"></span>
               <span :class="[
-                'relative inline-flex rounded-full h-2 w-2',
+                'relative inline-flex rounded-full h-1.5 w-1.5',
                 isHired ? 'bg-blue-500' : 'bg-emerald-500'
               ]"></span>
             </span>
@@ -69,21 +69,21 @@
     <footer class="w-full bg-[#161616] text-neutral-400 border-t border-black/50 select-none shrink-0">
       
       <!-- MAIN FOOTER: Left and Right Aligned to Viewport Edges -->
-      <div class="w-full px-8 md:px-14 xl:px-18 py-9 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs md:text-sm">
+      <div class="w-full px-6 md:px-10 xl:px-14 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 text-[11px] md:text-xs">
         <!-- Left Side: Educational Foundation -->
-        <div class="space-y-1 text-left">
+        <div class="space-y-0.5 text-left">
           <p class="font-bold tracking-wide text-neutral-300">Bachelor of Science in Computer Engineering</p>
           <p class="text-neutral-500 font-medium">Polytechnic University of the Philippines</p>
         </div>
         
         <!-- Right Side: System Placement Coordinates -->
-        <div class="space-y-1 text-left sm:text-right">
+        <div class="space-y-0.5 text-left sm:text-right">
           <p class="font-medium text-neutral-300">Based in Philippines</p>
           
-          <p class="text-neutral-300 font-mono text-xs flex items-center sm:justify-end gap-2 font-bold tracking-wide">
-            <span class="relative flex h-2 w-2">
+          <p class="text-neutral-300 font-mono text-[10px] flex items-center sm:justify-end gap-1.5 font-bold tracking-wide">
+            <span class="relative flex h-1.5 w-1.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500 shadow-[0_0_8px_#34d399]"></span>
+              <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500 shadow-[0_0_6px_#34d399]"></span>
             </span>
             System Status: Active
           </p>
@@ -91,8 +91,8 @@
       </div>
 
       <!-- SUB FOOTER: Centered Copyright Component Block -->
-      <div class="w-full bg-black/40 border-t border-white/[0.03] py-4 px-6 text-center">
-        <p class="text-xs text-neutral-500 tracking-wider font-medium">
+      <div class="w-full bg-black/40 border-t border-white/[0.03] py-2.5 px-6 text-center">
+        <p class="text-[10px] text-neutral-500 tracking-wider font-medium">
           © 2026 Samantha Heart S. Matiga. Engineered using Vue 3 &amp; Tailwind.
         </p>
       </div>
@@ -139,7 +139,7 @@ html, body {
    1. CUSTOM THEMED SCROLLBAR INTERFACE
    ========================================== */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -149,7 +149,7 @@ html, body {
 ::-webkit-scrollbar-thumb {
   background: #710014;
   border-radius: 10px;
-  border: 3px solid #710014;
+  border: 2px solid #710014;
 }
 
 ::-webkit-scrollbar-thumb:hover {
