@@ -68,7 +68,7 @@
             <button @click="navigateToWorks" class="bg-brand-accent hover:bg-brand-accent/90 text-brand-dark text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded shadow-lg transition duration-300 cursor-pointer hover:scale-[1.02] transform">
               View My Works
             </button>
-            <a href="/SamanthaHeart_Matiga_Resume.pdf" target="_blank" rel="noopener noreferrer" class="border border-brand-light/30 hover:border-brand-light hover:bg-brand-light/5 text-brand-light text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded transition duration-300 cursor-pointer inline-flex items-center justify-center">
+            <a href="/Matiga_SamanthaHeart_Resume.pdf" target="_blank" rel="noopener noreferrer" class="border border-brand-light/30 hover:border-brand-light hover:bg-brand-light/5 text-brand-light text-xs sm:text-sm font-bold tracking-widest uppercase px-7 py-3.5 rounded transition duration-300 cursor-pointer inline-flex items-center justify-center">
               View CV
             </a>
           </div>
